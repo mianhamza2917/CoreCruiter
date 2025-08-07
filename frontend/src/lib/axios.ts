@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 // Set base URL for development
-const baseURL = import.meta.env.PROD ? '/api' : 'http://localhost:3003/api'
+const baseURL = process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:3003/api'
 
 const api = axios.create({
   baseURL,
